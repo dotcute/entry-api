@@ -1,0 +1,49 @@
+query {
+  me {
+    id
+    username
+    nickname
+    role
+    isEmailAuth
+    isSnsAuth
+    isPhoneAuth
+    studentTerm
+    status {
+      userStatus
+    }
+    profileImage {
+      id
+      name
+      label {
+        ko
+        en
+        ja
+        vn
+      }
+      filename
+      imageType
+      dimension {
+        width
+        height
+      }
+      trimmed {
+        filename
+        width
+        height
+      }
+    }
+    banned {
+      username
+      nickname
+      reason
+      bannedCount
+      bannedType
+      projectId
+      startDate
+      userReflect {
+        status
+        endDate
+      }
+    }
+  }
+}

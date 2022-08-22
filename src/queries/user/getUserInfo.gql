@@ -1,0 +1,71 @@
+query ($id: String) {
+  userstatus(id: $id) {
+    id
+    nickname
+    username
+    description
+    shortUrl
+    profileImage {
+      id
+      name
+      label {
+        ko
+        en
+        ja
+        vn
+      }
+      filename
+      imageType
+      dimension {
+        width
+        height
+      }
+      trimmed {
+        filename
+        width
+        height
+      }
+    }
+    coverImage {
+      id
+      name
+      label {
+        ko
+        en
+        ja
+        vn
+      }
+      filename
+      imageType
+      dimension {
+        width
+        height
+      }
+      trimmed {
+        filename
+        width
+        height
+      }
+    }
+    role
+    studentTerm
+    status {
+      project
+      projectAll
+      study
+      studyAll
+      community {
+        qna
+        tips
+        free
+      }
+      following
+      follower
+      bookmark {
+        project
+        study
+      }
+      userStatus
+    }
+  }
+}
