@@ -1,3 +1,5 @@
+/// <reference types="../types/common.d.ts" />
+/// <reference types="../types/user.d.ts" />
 import { gql, loadQuery } from "../utils.ts";
 
 interface UserConstructor {
