@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "another_cookiejar": "https://deno.land/x/another_cookiejar@v2.2.1/mod.ts"
+  }
+}

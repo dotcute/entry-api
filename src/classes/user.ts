@@ -1,4 +1,4 @@
-import { gql, loadQuery } from '../utils.ts';
+import { gql, loadQuery } from "../utils.ts";
 
 interface UserConstructor {
   id: string;
@@ -72,7 +72,7 @@ export default class User {
 
   async #getRawData() {
     const res = await gql<UserTypes.UserInfo>(
-      await loadQuery('./src/queries/user/getUserInfo.gql'),
+      await loadQuery("./src/queries/user/getUserInfo.gql"),
       { id: this.id }
     );
     if (!res.success) return;
