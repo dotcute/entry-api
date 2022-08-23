@@ -98,7 +98,7 @@ export default class User {
     this.#__rawData = res.data;
   }
 
-  public async toJSON(): Promise<UserConstructor> {
+  public toJSON(): Promise<UserConstructor> {
     return (async () => {
       if (!this.#__rawData) await this.#getRawData();
 

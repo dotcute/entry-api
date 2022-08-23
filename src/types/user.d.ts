@@ -25,7 +25,7 @@ declare namespace UserTypes {
         project: number;
         study: number;
       };
-      userStatus: 'USE';
+      userStatus: "USE";
     };
   }
 }

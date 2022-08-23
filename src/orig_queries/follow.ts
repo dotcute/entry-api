@@ -1,5 +1,5 @@
-import * as DTO from './dto/follow'
-import * as Common from './dto/common'
+import * as DTO from "./dto/follow.ts";
+import * as Common from "./dto/common.ts";
 
 export const FOLLOWINGS = `
     query SELECT_FOLLOWINGS($user: String, $pageParam: PageParam){
@@ -10,7 +10,7 @@ export const FOLLOWINGS = `
             }
         }
     }
-`
+`;
 
 export const FOLLOWERS = `
     query SELECT_FOLLOWERS($user: String, $pageParam: PageParam){
@@ -21,7 +21,7 @@ export const FOLLOWERS = `
             }
         }
     }
-`
+`;
 
 export const CHECK_FOLLOW = `
     query CHECK_FOLLOW($user: String!){
@@ -29,7 +29,7 @@ export const CHECK_FOLLOW = `
             isFollow
         }
     }
-`
+`;
 
 export const FOLLOW = `
     mutation FOLLOW(
@@ -41,7 +41,7 @@ export const FOLLOW = `
             ${Common.FOLLOW}
         }
     }
-`
+`;
 
 export const UNFOLLOW = `
     mutation UNFOLLOW(
@@ -53,4 +53,4 @@ export const UNFOLLOW = `
             ${Common.FOLLOW}
         }
     }
-`
+`;

@@ -1,5 +1,5 @@
-import * as Common from './dto/common'
-import * as DTO from './dto/topic'
+import * as Common from "./dto/common.ts";
+import * as DTO from "./dto/topic.ts";
 
 export const TOPIC_SUBSCRIPTION = `
     subscription TOPIC_ADDED($target: String) {
@@ -7,7 +7,7 @@ export const TOPIC_SUBSCRIPTION = `
           ${Common.TOPIC}
         }
     }
-`
+`;
 
 export const ADD_TOPIC = `
   mutation ADD_TOPIC(
@@ -22,7 +22,7 @@ export const ADD_TOPIC = `
         }
       }
   }
-`
+`;
 
 export const SELECT_TOPICS = `
     query SELECT_TOPICS($pageParam: PageParam){
@@ -33,7 +33,7 @@ export const SELECT_TOPICS = `
             }
         }
     }
-`
+`;
 
 export const READ_TOPICS = `
     mutation {
@@ -41,7 +41,7 @@ export const READ_TOPICS = `
         ${Common.RESPONSE}
       }
     }
-`
+`;
 
 export const DELETE_TOPICS = `
     mutation {
@@ -49,7 +49,7 @@ export const DELETE_TOPICS = `
         ${Common.RESPONSE}
       }
     }
-`
+`;
 
 export const DELETE_TOPIC = `
     mutation($id: ID!) {
@@ -57,4 +57,4 @@ export const DELETE_TOPIC = `
         ${Common.RESPONSE}
       }
     }
-`
+`;

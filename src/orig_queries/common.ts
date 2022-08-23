@@ -1,4 +1,4 @@
-import * as Common from './dto/common'
+import * as Common from "./dto/common.ts";
 
 export const UPDATE_VIEWCOUNT = `
     mutation UPDATE_VIEWCOUNT(
@@ -10,4 +10,4 @@ export const UPDATE_VIEWCOUNT = `
             ${Common.RESPONSE}
         }
     }
-`
+`;

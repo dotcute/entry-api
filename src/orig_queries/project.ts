@@ -1,5 +1,5 @@
-import * as DTO from './dto/project'
-import * as Common from './dto/common'
+import * as DTO from "./dto/project.ts";
+import * as Common from "./dto/common.ts";
 
 export const SELECT_PROJECT = `
     query($id: ID! $groupId: ID) {
@@ -7,7 +7,7 @@ export const SELECT_PROJECT = `
             ${Common.PROJECT}
         }
      }
-`
+`;
 
 export const GET_CLOUD_SERVER_INFO = `
     query($id: ID!) {
@@ -16,7 +16,7 @@ export const GET_CLOUD_SERVER_INFO = `
             query
         }
     }
-`
+`;
 
 export const SELECT_STUDY_PROJECT = `
     query SELECT_STUDY_PROJECT($id: ID!) {
@@ -24,7 +24,7 @@ export const SELECT_STUDY_PROJECT = `
             ${Common.PROJECT}
         }
     }
-`
+`;
 
 export const SELECT_PROJECTS = `
     query SELECT_PROJECTS(
@@ -41,7 +41,7 @@ export const SELECT_PROJECTS = `
             searchAfter
         }
     }
-`
+`;
 
 export const SELECT_USER_PROJECTS = `
     query SELECT_USER_PROJECTS(
@@ -57,7 +57,7 @@ export const SELECT_USER_PROJECTS = `
             searchAfter
         }
     }
-`
+`;
 
 export const SELECT_FOLLOWING_PROJECTS = `
     query SELECT_FOLLOWING_PROJECTS(
@@ -73,7 +73,7 @@ export const SELECT_FOLLOWING_PROJECTS = `
             searchAfter
         }
     }
-`
+`;
 
 export const SELECT_FAVORITE_PROJECTS = `
     query SELECT_FAVORITE_PROJECTS(
@@ -91,7 +91,7 @@ export const SELECT_FAVORITE_PROJECTS = `
             searchAfter
         }
     }
-`
+`;
 
 export const BESIDE_PROJECTS = `
     query BESIDE_PROJECTS ($id: ID!, $user: String, $query: String) {
@@ -101,7 +101,7 @@ export const BESIDE_PROJECTS = `
             }
         }
     }
-`
+`;
 
 export const CREATE_PROJECT = `
     mutation CREATE_PROJECT(
@@ -113,7 +113,7 @@ export const CREATE_PROJECT = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const UPSERT_LECTURE_PROJECT = `
     mutation UPSERT_LECTURE_PROJECT(
@@ -125,7 +125,7 @@ export const UPSERT_LECTURE_PROJECT = `
             ${Common.PROJECT}
         }
     }
-`
+`;
 
 export const UPDATE_PROJECT = `
     mutation UPDATE_PROJECT(
@@ -137,7 +137,7 @@ export const UPDATE_PROJECT = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const SHARE_GROUP_PROJECT_CANCEL = `
     mutation SHARE_GROUP_PROJECT_CANCEL(
@@ -151,7 +151,7 @@ export const SHARE_GROUP_PROJECT_CANCEL = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const REMOVE_PROJECT = `
     mutation REMOVE_PROJECT($id: ID!) {
@@ -161,7 +161,7 @@ export const REMOVE_PROJECT = `
             ok
         }
     }
-`
+`;
 
 export const DELETE_PROJECT = `
     mutation DELETE_PROJECT($id: ID!) {
@@ -170,7 +170,7 @@ export const DELETE_PROJECT = `
             result
         }
     }
-`
+`;
 
 export const BLAMED_PROJECT = `
     mutation BLAMED_PROJECT($id: ID! $groupId: ID) {
@@ -179,7 +179,7 @@ export const BLAMED_PROJECT = `
             result
         }
     }
-`
+`;
 
 export const SHOW_PROJECT = `
     mutation SHOW_PROJECT($id: ID!) {
@@ -188,7 +188,7 @@ export const SHOW_PROJECT = `
             result
         }
     }
-`
+`;
 
 export const DELETE_LECTURE_PROJECT = `
     mutation DELETE_LECTURE_PROJECT($id: ID!) {
@@ -197,7 +197,7 @@ export const DELETE_LECTURE_PROJECT = `
             result
         }
     }
-`
+`;
 
 export const INCREASE_COUNTER = `
     mutation INCREATE_COUNTER(
@@ -212,7 +212,7 @@ export const INCREASE_COUNTER = `
             ok
         }
     }
-`
+`;
 
 export const DECREASE_COUNTER = `
     mutation DECREASE_COUNTER(
@@ -227,7 +227,7 @@ export const DECREASE_COUNTER = `
             ok
         }
     }
-`
+`;
 
 export const SET_OPEN = `
     mutation SET_OPEN($id: ID!, $isopen: Boolean) {
@@ -237,7 +237,7 @@ export const SET_OPEN = `
             ok
         }
     }
-`
+`;
 
 export const SET_STAFF_PICKED = `
     mutation SET_STAFF_PICKED($id: ID!, $staffPicked: Boolean) {
@@ -247,7 +247,7 @@ export const SET_STAFF_PICKED = `
             ok
         }
     }
-`
+`;
 
 export const SWITCH_PROJECT_IS_OPEN = `
     mutation SWITCH_PROJECT_IS_OPEN($id: ID!) {
@@ -257,7 +257,7 @@ export const SWITCH_PROJECT_IS_OPEN = `
             ok
         }
     }
-`
+`;
 
 export const SAVE_PROJECT_COMPONENT_LOG = `
     mutation SAVE_PROJECT_COMPONENT_LOG($logs: [JSON]) {
@@ -265,7 +265,7 @@ export const SAVE_PROJECT_COMPONENT_LOG = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const CHECK_EXISTS_PROJECT_ID = `
     query ($id: ID!) {
@@ -273,7 +273,7 @@ export const CHECK_EXISTS_PROJECT_ID = `
             exists
         }
     }
-`
+`;
 
 export const CHECK_EXISTS_PROJECT_AND_USER = `
     query ($id: ID!, $username: String!) {
@@ -284,4 +284,4 @@ export const CHECK_EXISTS_PROJECT_AND_USER = `
             exists
         }
     }
-`
+`;

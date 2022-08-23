@@ -1,4 +1,4 @@
-import * as Common from './dto/common'
+import * as Common from "./dto/common.ts";
 
 export const REPORT_FEEDBACK = `
 mutation ($reportJson: JSON) {
@@ -6,7 +6,7 @@ mutation ($reportJson: JSON) {
         ${Common.RESPONSE}
     }
 }
-`
+`;
 
 export const FEEDBACK_USER_LIST = `
     query($id: ID) {
@@ -26,4 +26,4 @@ export const FEEDBACK_USER_LIST = `
             }
         }
     }
-`
+`;

@@ -1,4 +1,4 @@
-import * as Common from './dto/common'
+import * as Common from "./dto/common.ts";
 
 const USER = `
     id
@@ -28,7 +28,7 @@ const USER = `
             endDate
         }
     }
-`
+`;
 
 const PERSONAL_INFO = ` 
     mobile
@@ -36,7 +36,7 @@ const PERSONAL_INFO = `
     grade
     gender
     isSnsId
-`
+`;
 
 export const CURRENT_USER_QUERY = `
     query {
@@ -44,7 +44,7 @@ export const CURRENT_USER_QUERY = `
             ${USER}
         }
     }
-`
+`;
 
 export const FIND_PERSONAL_INFO = `
     query {
@@ -55,7 +55,7 @@ export const FIND_PERSONAL_INFO = `
             ${PERSONAL_INFO}
         }
     }
-`
+`;
 
 export const FIND_STUDENT_INFO = `
     query {
@@ -78,7 +78,7 @@ export const FIND_STUDENT_INFO = `
             status
         }
     }
-`
+`;
 
 export const FIND_USER_BY_USERNAME = `
     query ($username: String) {
@@ -86,7 +86,7 @@ export const FIND_USER_BY_USERNAME = `
             id
         }
     }
-`
+`;
 
 export const FIND_USER_BY_NICKNAME = `
     query ($nickname: String) {
@@ -94,7 +94,7 @@ export const FIND_USER_BY_NICKNAME = `
             id
         }
     }
-`
+`;
 
 export const FIND_USER_BY_HASHED_VALUE = `
     query ($hashedValue: String) {
@@ -104,7 +104,7 @@ export const FIND_USER_BY_HASHED_VALUE = `
             username
         }
     }
-`
+`;
 
 export const CHECK_EXISTS_EMAIL = `
     query ($email: String) {
@@ -112,7 +112,7 @@ export const CHECK_EXISTS_EMAIL = `
             exists
         }
     }
-`
+`;
 
 export const CHECK_EXISTS_MOBILE = `
     query ($mobile: String) {
@@ -120,7 +120,7 @@ export const CHECK_EXISTS_MOBILE = `
             exists
         }
     }
-`
+`;
 
 export const FIND_USERSTATUS_BY_USERNAME = `
     query ($id: String) {
@@ -158,7 +158,7 @@ export const FIND_USERSTATUS_BY_USERNAME = `
             }
         }
     }
-`
+`;
 
 export const REQUEST_MOBILE_AUTHENTICATION = `
     mutation ($number: String!, $nationalNumber: String!, $contryCode: String) {
@@ -166,7 +166,7 @@ export const REQUEST_MOBILE_AUTHENTICATION = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const SEND_RECEIVE_NUMBER = `
     mutation ($key: String!, $receiveNumber: String!) {
@@ -174,7 +174,7 @@ export const SEND_RECEIVE_NUMBER = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const CHECK_EXISTS_USERNAME = `
     query ($username: String) {
@@ -182,7 +182,7 @@ export const CHECK_EXISTS_USERNAME = `
             exists
         }
     }
-`
+`;
 
 export const CHECK_PROHIBITED_WORD = `
     query ($type: String, $word: String) {
@@ -190,7 +190,7 @@ export const CHECK_PROHIBITED_WORD = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const CHECK_EXISTS_NICKNAME = `
     query ($nickname: String) {
@@ -198,7 +198,7 @@ export const CHECK_EXISTS_NICKNAME = `
             exists
         }
     }
-`
+`;
 
 export const RECOMMEND_USER = `
     query ($minCount: Int, $limit: Int) {
@@ -217,7 +217,7 @@ export const RECOMMEND_USER = `
             }
         }
     }
-`
+`;
 
 export const SIGNIN_BY_USERNAME = `
     mutation (
@@ -239,7 +239,7 @@ export const SIGNIN_BY_USERNAME = `
             ${USER}
         }
     }
-`
+`;
 
 export const WITHDRAW_SIGNIN_BY_USERNAME = `
     mutation (
@@ -261,7 +261,7 @@ export const WITHDRAW_SIGNIN_BY_USERNAME = `
             ${USER}
         }
     }
-`
+`;
 
 export const SIGNUP_BY_USERNAME = `
     mutation ($role: String!, $grade: String!, $gender: String!, $nickname: String!, $email: String, $username: String!, $password: String!, $passwordConfirm: String!, $mobileKey: String) {
@@ -269,7 +269,7 @@ export const SIGNUP_BY_USERNAME = `
             ${USER}
         }
     }
-`
+`;
 
 export const REMOVE_USER = `
     mutation {
@@ -277,7 +277,7 @@ export const REMOVE_USER = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const UNSUBSCRIBE_USER = `
     mutation ($password: String!) {
@@ -285,7 +285,7 @@ export const UNSUBSCRIBE_USER = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const SIGNOUT = `
     mutation {
@@ -293,7 +293,7 @@ export const SIGNOUT = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const SIGNIN_FOR_NAVER = `
     mutation ($ses: String!, $idno: String!, $isWithdraw: Boolean) {
@@ -301,7 +301,7 @@ export const SIGNIN_FOR_NAVER = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const SIGNIN_FOR_NAVER_BEGIN = `
     mutation {
@@ -309,7 +309,7 @@ export const SIGNIN_FOR_NAVER_BEGIN = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const SIGNIN_FOR_NAVER_CALLBACK = `
     mutation ($code: String!, $state: String!) {
@@ -317,7 +317,7 @@ export const SIGNIN_FOR_NAVER_CALLBACK = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const SIGNUP_FOR_NAVER = `
     mutation ($role: String!, $grade: String!, $gender: String!, $nickname: String!, $mobileKey: String) {
@@ -325,7 +325,7 @@ export const SIGNUP_FOR_NAVER = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const SEND_FORGOT_PASSWORD = `
     mutation ($email: String!) {
@@ -333,7 +333,7 @@ export const SEND_FORGOT_PASSWORD = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const CHANGE_TEACHER_TO_MEMBER = `
     mutation {
@@ -341,7 +341,7 @@ export const CHANGE_TEACHER_TO_MEMBER = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 export const UPDATE_USERINFO = `
     mutation UPDATE_USERINFO (
         $profileImage: String,
@@ -362,7 +362,7 @@ export const UPDATE_USERINFO = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const CHANGE_USER_EMAIL = `
     mutation ($email: String!) {
@@ -370,7 +370,7 @@ export const CHANGE_USER_EMAIL = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const CHANGE_USER_PASSWORD = `
     mutation ($password: String!, $newPassword: String!) {
@@ -378,7 +378,7 @@ export const CHANGE_USER_PASSWORD = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const STUDENT_PASSWORD_AND_TERM = `
     mutation ($password: String!, $password2: String!, $gender: String!) {
@@ -386,7 +386,7 @@ export const STUDENT_PASSWORD_AND_TERM = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const CHANGE_USER_PASSWORD_BY_HASHED_VALUE = `
     mutation ($password: String!, $hashedValue: String!) {
@@ -394,7 +394,7 @@ export const CHANGE_USER_PASSWORD_BY_HASHED_VALUE = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const SNS_MAPPING_FOR_NAVER_BEGIN = `
     mutation {
@@ -402,7 +402,7 @@ export const SNS_MAPPING_FOR_NAVER_BEGIN = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const SNS_MAPPING_FOR_NAVER = `
     mutation ($email: String, $gender: String) {
@@ -410,7 +410,7 @@ export const SNS_MAPPING_FOR_NAVER = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const SNS_CLEAR_FOR_NAVER = `
     mutation {
@@ -418,7 +418,7 @@ export const SNS_CLEAR_FOR_NAVER = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const TOGGLE_ALARM_ALLOW = `
     mutation {
@@ -426,7 +426,7 @@ export const TOGGLE_ALARM_ALLOW = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const GET_CAPTCHA_DATA = `
     query ($captchaType: String!) {
@@ -434,4 +434,4 @@ export const GET_CAPTCHA_DATA = `
             ${Common.RESPONSE}
         }
     }
-`
+`;

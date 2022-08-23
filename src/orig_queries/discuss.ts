@@ -1,5 +1,5 @@
-import * as DTO from './dto/discuss'
-import * as Common from './dto/common'
+import * as DTO from "./dto/discuss.ts";
+import * as Common from "./dto/common.ts";
 
 export const SELECT_DISCUSS = `
     query ($id: ID!){
@@ -7,7 +7,7 @@ export const SELECT_DISCUSS = `
             ${Common.DISCUSS}
         }
     }
-`
+`;
 
 export const SELECT_GROUP_COMMUNITY = `
     query ($id: ID! $groupId: ID){
@@ -15,7 +15,7 @@ export const SELECT_GROUP_COMMUNITY = `
             ${Common.DISCUSS}
         }
     }
-`
+`;
 
 export const SELECT_DISCUSS_PREV_NEXT = `
     query ($discussJson: JSON){
@@ -24,7 +24,7 @@ export const SELECT_DISCUSS_PREV_NEXT = `
             next
         }
     }
-`
+`;
 
 export const SELECT_MY_DISCUSS = `
     query ($id: ID!){
@@ -32,7 +32,7 @@ export const SELECT_MY_DISCUSS = `
             ${Common.DISCUSS}
         }
     }
-`
+`;
 
 export const SELECT_DISCUSS_LIST = `
     query (${DTO.SELECT_DISCUSS_LIST_INPUT}){
@@ -44,7 +44,7 @@ export const SELECT_DISCUSS_LIST = `
             searchAfter
         }
     }
-`
+`;
 
 export const CREATE_DISCUSS = `
     mutation CREATE_DISCUSS(
@@ -59,7 +59,7 @@ export const CREATE_DISCUSS = `
             }
         }
     }
-`
+`;
 
 export const CREATE_ENTRYSTORY = `
     mutation CREATE_ENTRYSTORY(
@@ -74,7 +74,7 @@ export const CREATE_ENTRYSTORY = `
             }
         }
     }
-`
+`;
 
 export const MODIFY_DISCUSS = `
     mutation MODIFY_DISCUSS(
@@ -94,7 +94,7 @@ export const MODIFY_DISCUSS = `
             ${Common.DISCUSS}
         }
     }
-`
+`;
 
 export const SELECT_QNA_LIST = `
     query (${DTO.SELECT_DISCUSS_LIST_INPUT}){
@@ -106,7 +106,7 @@ export const SELECT_QNA_LIST = `
             searchAfter
         }
     }
-`
+`;
 
 export const SELECT_ENTRYSTORY = `
     query (${DTO.SELECT_DISCUSS_LIST_INPUT}){
@@ -118,7 +118,7 @@ export const SELECT_ENTRYSTORY = `
             searchAfter
         }
     }
-`
+`;
 
 export const SELECT_NOTICE_LIST = `
     query (${DTO.SELECT_DISCUSS_LIST_INPUT}){
@@ -130,7 +130,7 @@ export const SELECT_NOTICE_LIST = `
             searchAfter
         }
     }
-`
+`;
 
 export const REMOVE_DISCUSS = `
     mutation REMOVE_DISCUSS($id: ID) {
@@ -138,7 +138,7 @@ export const REMOVE_DISCUSS = `
             id
         }
     }
-`
+`;
 
 export const BLAMED_DISCUSS = `
     mutation BLAMED_DISCUSS($id: ID) {
@@ -146,7 +146,7 @@ export const BLAMED_DISCUSS = `
             id
         }
     }
-`
+`;
 
 export const SHOW_DISCUSS = `
     mutation SHOW_DISCUSS($id: ID){
@@ -154,7 +154,7 @@ export const SHOW_DISCUSS = `
             id
         }
     }
-`
+`;
 
 // JSON 데이터 커뮤니티 삭제 (학급)
 export const REMOVE_DISCUSS_INFO = `
@@ -163,7 +163,7 @@ export const REMOVE_DISCUSS_INFO = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 // JSON 커뮤니티 숨김 (학급)
 export const BLAMED_DISCUSS_INFO = `
@@ -172,7 +172,7 @@ export const BLAMED_DISCUSS_INFO = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const REPLY_DISCUSS = `
     mutation REPLY_DISCUSS($id: ID!, $reply: String) {
@@ -180,7 +180,7 @@ export const REPLY_DISCUSS = `
             ${DTO.SUGGESTION}
         }
     }
-`
+`;
 
 export const REPAIR_ENTRYSTORY = `
     mutation REPAIR_COMMENT($id: ID, $content: String, $image: String, $sticker: String){
@@ -188,4 +188,4 @@ export const REPAIR_ENTRYSTORY = `
             ${Common.DISCUSS}
         }
     }
-`
+`;

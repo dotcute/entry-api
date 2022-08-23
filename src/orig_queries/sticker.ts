@@ -1,4 +1,4 @@
-import * as Common from './dto/common'
+import * as Common from "./dto/common.ts";
 
 export const SELECT_STICKER = `
     query($title: String){
@@ -6,4 +6,4 @@ export const SELECT_STICKER = `
             ${Common.STICKER}
         }
     }
-`
+`;

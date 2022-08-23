@@ -1,4 +1,4 @@
-import * as Common from './dto/common'
+import * as Common from "./dto/common.ts";
 
 export const REFLECT_LIST = `
     query($id: ID) {
@@ -20,7 +20,7 @@ export const REFLECT_LIST = `
             }
         }
     }
-`
+`;
 
 export const REPORT_REFLECT = `
 mutation ($reflectJson: JSON) {
@@ -28,4 +28,4 @@ mutation ($reflectJson: JSON) {
         ${Common.RESPONSE}
     }
 }
-`
+`;

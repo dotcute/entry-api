@@ -1,5 +1,5 @@
-import * as DTO from './dto/curriculum'
-import * as Common from './dto/common'
+import * as DTO from "./dto/curriculum.ts";
+import * as Common from "./dto/common.ts";
 
 export const CREATE_CURRICULUM = `
     mutation CREATE_CURRICULUM(
@@ -11,7 +11,7 @@ export const CREATE_CURRICULUM = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const UPDATE_CURRICULUM = `
     mutation UPDATE_CURRICULUM(
@@ -23,7 +23,7 @@ export const UPDATE_CURRICULUM = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const DELETE_CURRICULUM = `
     mutation DELETE_CURRICULUM(
@@ -35,7 +35,7 @@ export const DELETE_CURRICULUM = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const SELECT_CURRICULUM = `
     query SELECT_CURRICULUM($id: ID!, $groupId: ID){
@@ -43,7 +43,7 @@ export const SELECT_CURRICULUM = `
             ${Common.CURRICULUM}
         }
     }
-`
+`;
 
 export const BLAMED_CURRICULUM = `
     mutation BLAMED_CURRICULUM($id: ID!){
@@ -51,7 +51,7 @@ export const BLAMED_CURRICULUM = `
             ${Common.CURRICULUM}
         }
     }
-`
+`;
 
 export const SHOW_CURRICULUM = `
     mutation SHOW_CURRICULUM($id: ID!){
@@ -59,4 +59,4 @@ export const SHOW_CURRICULUM = `
             ${Common.CURRICULUM}
         }
     }
-`
+`;

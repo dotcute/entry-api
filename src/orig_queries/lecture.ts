@@ -1,5 +1,5 @@
-import * as DTO from './dto/lecture'
-import * as Common from './dto/common'
+import * as DTO from "./dto/lecture.ts";
+import * as Common from "./dto/common.ts";
 
 export const CREATE_LECTURE = `
     mutation CREATE_LECTURE(
@@ -11,7 +11,7 @@ export const CREATE_LECTURE = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 export const UPDATE_LECTURE = `
     mutation UPDATE_LECTURE(
         ${DTO.UPDATE_LECTURE_INPUT}
@@ -22,7 +22,7 @@ export const UPDATE_LECTURE = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const COPY_LECTURE = `
     mutation COPY_LECTURE(
@@ -34,7 +34,7 @@ export const COPY_LECTURE = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const DELETE_LECTURE = `
     mutation DELETE_LECTURE(
@@ -46,7 +46,7 @@ export const DELETE_LECTURE = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 export const BLAMED_LECTURE = `
     mutation BLAMED_LECTURE( $id: ID! ) {
@@ -54,7 +54,7 @@ export const BLAMED_LECTURE = `
             ${Common.LECTURE}
         }
     }
-`
+`;
 
 export const SHOW_LECTURE = `
     mutation SHOW_LECTURE( $id: ID! ) {
@@ -62,7 +62,7 @@ export const SHOW_LECTURE = `
             ${Common.LECTURE}
         }
     }
-`
+`;
 
 export const SELECT_LECTURE = `
     query SELECT_LECTURE($id: ID!, $groupId: ID, $studentId: ID){
@@ -70,7 +70,7 @@ export const SELECT_LECTURE = `
             ${Common.LECTURE}
         }
     }
-`
+`;
 
 export const SELECT_LECTURE_WITH_INFOS = `
     query SELECT_LECTURE_WITH_INFOS($id: ID!, $groupId: ID, $studentId: ID, $homeworkId: ID){
@@ -89,7 +89,7 @@ export const SELECT_LECTURE_WITH_INFOS = `
             }
         }
     }
-`
+`;
 
 // 과제등록시 조회하는 스터디 리스트
 export const SELECT_LECTURE_FOR_HOMEWORK = `
@@ -98,4 +98,4 @@ export const SELECT_LECTURE_FOR_HOMEWORK = `
             ${Common.LECTURE}
         }
     }
-`
+`;

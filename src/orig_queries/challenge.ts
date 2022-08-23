@@ -1,4 +1,4 @@
-import * as Common from './dto/common'
+import * as Common from "./dto/common.ts";
 
 export const SELECT_CURRENT_CHALLENGE = `
     query  {
@@ -6,4 +6,4 @@ export const SELECT_CURRENT_CHALLENGE = `
             ${Common.CHALLENGE}
         }
     }
-`
+`;

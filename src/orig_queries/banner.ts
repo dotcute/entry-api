@@ -1,4 +1,4 @@
-import * as Common from './dto/common'
+import * as Common from "./dto/common.ts";
 
 export const SELECT_BANNERS = `
     query ($category: String, $deviceType: String) {
@@ -9,7 +9,7 @@ export const SELECT_BANNERS = `
             }
         }
     }
-`
+`;
 
 export const SELECT_STUDY_INFO = `
     query {
@@ -22,4 +22,4 @@ export const SELECT_STUDY_INFO = `
             }
         }
     }
-`
+`;

@@ -1,4 +1,4 @@
-import * as Common from './dto/common'
+import * as Common from "./dto/common.ts";
 
 export const SELECT_ALL = `
     query (
@@ -33,7 +33,7 @@ export const SELECT_ALL = `
             }
         }
     }
-`
+`;
 
 export const GET_POPULAR_SEARCH_WORD = `
     query {
@@ -41,7 +41,7 @@ export const GET_POPULAR_SEARCH_WORD = `
             words
         }
     }
-`
+`;
 
 export const SET_POPULAR_SEARCH_WORD = `
     mutation ($query: String) {
@@ -49,4 +49,4 @@ export const SET_POPULAR_SEARCH_WORD = `
             ${Common.RESPONSE}
         }
     }
-`
+`;

@@ -1,5 +1,5 @@
-import * as DTO from './dto/syllabus'
-import * as Common from './dto/common'
+import * as DTO from "./dto/syllabus.ts";
+import * as Common from "./dto/common.ts";
 
 export const SELECT_SYLLABUS = `
     query SELECT_SYLLABUS(
@@ -15,7 +15,7 @@ export const SELECT_SYLLABUS = `
             searchAfter
         }
     }
-`
+`;
 
 export const SELECT_USER_SYLLABUS = `
     query SELECT_USER_SYLLABUS(
@@ -31,7 +31,7 @@ export const SELECT_USER_SYLLABUS = `
             searchAfter
         }
     }
-`
+`;
 
 export const SELECT_FAVORITE_SYLLABUS = `
     query SELECT_FAVORITE_SYLLABUS(
@@ -48,7 +48,7 @@ export const SELECT_FAVORITE_SYLLABUS = `
             }
         }
     }
-`
+`;
 
 export const SYLLABUS_PREV_NEXT = `
     query SYLLABUS_PREV_NEXT ($groupId: ID, $homework: Boolean, $created: Int) {
@@ -63,4 +63,4 @@ export const SYLLABUS_PREV_NEXT = `
             }
         }
     }
-`
+`;

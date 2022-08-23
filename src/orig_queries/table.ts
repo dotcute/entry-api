@@ -1,4 +1,4 @@
-import { TABLE, TABLE_INFO } from './dto/common'
+import { TABLE, TABLE_INFO } from "./dto/common.ts";
 
 export const GET_TABLE = `
     query($id: ID!) {
@@ -6,7 +6,7 @@ export const GET_TABLE = `
             ${TABLE}
         }
     }
-`
+`;
 
 export const GET_TABLES = `
     query {
@@ -16,7 +16,7 @@ export const GET_TABLES = `
             }
         }
     }
-`
+`;
 
 export const SEARCH_TABLES = `
     query($name: String) {
@@ -26,4 +26,4 @@ export const SEARCH_TABLES = `
             }
         }
     }
-`
+`;

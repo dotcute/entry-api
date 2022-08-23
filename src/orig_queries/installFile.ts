@@ -1,4 +1,4 @@
-import { INSTALL_FILE } from './dto/common'
+import { INSTALL_FILE } from "./dto/common.ts";
 
 export const GET_INSTALL_FILES = `
     query($limit: Int, $category: String!, $page: Int) {
@@ -9,7 +9,7 @@ export const GET_INSTALL_FILES = `
             total
         }
     }
-`
+`;
 
 export const GET_LATEST_FILE = `
     query($category: String!) {
@@ -17,4 +17,4 @@ export const GET_LATEST_FILE = `
             ${INSTALL_FILE}
         }
     }
-`
+`;

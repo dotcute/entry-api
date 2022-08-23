@@ -1,4 +1,4 @@
-import * as Common from './dto/common'
+import * as Common from "./dto/common.ts";
 
 export const FAVORITES = `
     query FAVORITES($user: String, $target: String, $targetSubject: String, $targetType: String, $pageParam: PageParam){
@@ -12,7 +12,7 @@ export const FAVORITES = `
             }
         }
     }
-`
+`;
 
 export const FAVORITE_COUNTS = `
     query FAVORITES($user: String, $target: String, $targetSubject: String, $targetType: String, $pageParam: PageParam){
@@ -20,7 +20,7 @@ export const FAVORITE_COUNTS = `
             total
         }
     }
-`
+`;
 
 export const CHECK_FAV = `
     query CHECK_FAV($target: String!){
@@ -28,7 +28,7 @@ export const CHECK_FAV = `
             isFavorite
         }
     }
-`
+`;
 
 export const FAV = `
     mutation FAV($target: String, $targetSubject: String, $targetType: String, $groupId: ID) {
@@ -36,7 +36,7 @@ export const FAV = `
             ${Common.FAVORITE}
         }
     }
-`
+`;
 
 export const UNFAV = `
     mutation UNFAV($target: String) {
@@ -44,7 +44,7 @@ export const UNFAV = `
             ${Common.FAVORITE}
         }
     }
-`
+`;
 
 export const FAV_LIST = `
     query FAV_LIST($target: String!){
@@ -55,4 +55,4 @@ export const FAV_LIST = `
             }
         }
     }
-`
+`;

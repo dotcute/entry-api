@@ -1,4 +1,4 @@
-import { SPRITE } from './dto/common'
+import { SPRITE } from "./dto/common.ts";
 
 export const GET_SPRITES = `
     query($category_main: String, $category_sub: String, $type: String, $userId: String, $pageParam: PageParam) {
@@ -8,7 +8,7 @@ export const GET_SPRITES = `
             }
         }
     }
-`
+`;
 
 export const SEARCH_SPRITES = `
 query($name: String, $type: String) {
@@ -18,4 +18,4 @@ query($name: String, $type: String) {
             }
         }
     }
-`
+`;

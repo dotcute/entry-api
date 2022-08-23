@@ -1,5 +1,5 @@
-import * as DTO from './dto/comment'
-import * as Common from './dto/common'
+import * as DTO from "./dto/comment.ts";
+import * as Common from "./dto/common.ts";
 
 export const SELECT_COMMENTS = `
     query (${DTO.SELECT_COMMENTS_INPUT}){
@@ -10,7 +10,7 @@ export const SELECT_COMMENTS = `
             }
         }
     }
-`
+`;
 
 export const CREATE_COMMENT = `
     mutation CREATE_COMMENT(
@@ -25,7 +25,7 @@ export const CREATE_COMMENT = `
             }
         }
     }
-`
+`;
 
 export const REMOVE_COMMENT = `
     mutation REMOVE_COMMENT($id:ID){
@@ -33,7 +33,7 @@ export const REMOVE_COMMENT = `
             id
         }
     }
-`
+`;
 
 export const CREATE_AGREE = `
     mutation CREATE_AGREE(
@@ -45,7 +45,7 @@ export const CREATE_AGREE = `
             ${Common.COMMENT}
         }
     }
-`
+`;
 
 export const HIDE_COMMENT = `
     mutation HIDE_COMMENT($id: ID){
@@ -53,7 +53,7 @@ export const HIDE_COMMENT = `
             ${Common.COMMENT}
         }
     }
-`
+`;
 
 export const SHOW_COMMENT = `
     mutation SHOW_COMMENT($id: ID){
@@ -61,7 +61,7 @@ export const SHOW_COMMENT = `
             ${Common.COMMENT}
         }
     }
-`
+`;
 
 export const REPAIR_COMMENT = `
     mutation REPAIR_COMMENT($id: ID, $content: String, $image: String, $sticker: String){
@@ -69,7 +69,7 @@ export const REPAIR_COMMENT = `
             ${Common.COMMENT}
         }
     }
-`
+`;
 
 export const CHECK_AGREE = `
     query CHECK_AGREE($target: String) {
@@ -77,7 +77,7 @@ export const CHECK_AGREE = `
             ${Common.COMMENT}
         }
     }
-`
+`;
 
 export const BLAMED_COMMENT = `
     mutation BLAMED_COMMENT($id: ID) {
@@ -85,4 +85,4 @@ export const BLAMED_COMMENT = `
             ${Common.COMMENT}
         }
     }
-`
+`;

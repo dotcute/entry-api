@@ -1,5 +1,5 @@
-import * as Common from './dto/common'
-import * as Discuss from './dto/discuss'
+import * as Common from "./dto/common.ts";
+import * as Discuss from "./dto/discuss.ts";
 
 const GROUP_HOME = `
     id
@@ -86,7 +86,7 @@ const GROUP_HOME = `
     created
     updated
     isGroupOwner
-`
+`;
 
 export const CREATE_GROUP_BY_USER = `
     mutation( $groupJson: JSON ) {
@@ -95,7 +95,7 @@ export const CREATE_GROUP_BY_USER = `
             name
         }
     }
-`
+`;
 
 export const UPDATE_GROUP_BY_USER = `
     mutation( $groupJson: JSON ) {
@@ -103,7 +103,7 @@ export const UPDATE_GROUP_BY_USER = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 // 커뮤니티 등록
 export const CREATE_COMMUNITY_BY_USER = `
@@ -112,7 +112,7 @@ export const CREATE_COMMUNITY_BY_USER = `
             id
         }
     }
-`
+`;
 
 // 커뮤니티 수정
 export const UPDATE_COMMUNITY_BY_USER = `
@@ -121,7 +121,7 @@ export const UPDATE_COMMUNITY_BY_USER = `
             id
         }
     }
-`
+`;
 
 // 커뮤니티 조회
 export const SELECT_COMMUNITY_BY_USER = `
@@ -130,7 +130,7 @@ export const SELECT_COMMUNITY_BY_USER = `
             ${Discuss.Community}
         }
     }
-`
+`;
 
 export const SELECT_INVATE_CODE_CHECK = `
     query($queryString: JSON) {
@@ -139,7 +139,7 @@ export const SELECT_INVATE_CODE_CHECK = `
             name
         }
     }
-`
+`;
 
 export const INVATE_CODE_JOIN = `
     mutation( $groupJson: JSON ) {
@@ -151,7 +151,7 @@ export const INVATE_CODE_JOIN = `
             }
         }
     }
-`
+`;
 
 // 초대 코드 재생성
 export const INVATE_CODE_REMAKE = `
@@ -163,7 +163,7 @@ export const INVATE_CODE_REMAKE = `
             }
         }
     }
-`
+`;
 
 // 학생 패스워드 재생성
 export const STUDENT_PASSWD_RESET = `
@@ -172,7 +172,7 @@ export const STUDENT_PASSWD_RESET = `
             tempPwd
         }
     }
-`
+`;
 
 // 학급 학생 등록
 export const CREATE_MY_STUDENT_LIST = `
@@ -184,7 +184,7 @@ export const CREATE_MY_STUDENT_LIST = `
             }
         }
     }
-`
+`;
 
 // 학급 학생수정
 export const UPDATE_MY_STUDENT_LIST = `
@@ -193,7 +193,7 @@ export const UPDATE_MY_STUDENT_LIST = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 // 선생님 계정 학급이용 동의 처리
 export const AGREE_TO_STUDENT_TERM = `
@@ -202,7 +202,7 @@ mutation( $groupJson: JSON ) {
         id
     }
 }
-`
+`;
 
 // 학급 삭제하기 ( role : teacher )
 export const DELETE_MY_CLASS_GROUP = `
@@ -211,7 +211,7 @@ mutation( $groupJson: JSON ) {
         ${Common.RESPONSE}
     }
 }
-`
+`;
 
 // 전체 학급 삭제하기 ( role : teacher )
 export const DELETE_ALL_MY_CLASS_GROUP = `
@@ -220,7 +220,7 @@ mutation {
         ${Common.RESPONSE}
     }
 }
-`
+`;
 
 // 학급 나가기
 export const LEAVE_JOIN_GROUP = `
@@ -229,7 +229,7 @@ mutation( $groupJson: JSON ) {
         ${Common.RESPONSE}
     }
 }
-`
+`;
 
 // 학급 신고하기
 export const REPORT_GROUP_FEEDBACK = `
@@ -238,7 +238,7 @@ mutation( $groupJson: JSON ) {
         ${Common.RESPONSE}
     }
 }
-`
+`;
 
 export const SELECT_MY_GROUP_LIST = `
     query($queryString: JSON, $pageParam: PageParam) {
@@ -251,7 +251,7 @@ export const SELECT_MY_GROUP_LIST = `
             }
         }
     }
-`
+`;
 
 export const SELECT_JOIN_GROUP_LIST = `
     query($queryString: JSON, $pageParam: PageParam) {
@@ -264,7 +264,7 @@ export const SELECT_JOIN_GROUP_LIST = `
             }
         }
     }
-`
+`;
 
 // 나의 학급 조회
 export const SELECT_MY_GROUP = `
@@ -273,7 +273,7 @@ export const SELECT_MY_GROUP = `
             ${GROUP_HOME}
         }
     }
-`
+`;
 
 // 나의학급 작품 리스트
 export const SELECT_GROUP_PROJECT_LIST = `
@@ -302,7 +302,7 @@ export const SELECT_GROUP_PROJECT_LIST = `
             searchAfter
         }
     }
-`
+`;
 
 // 나의 학급 커뮤니티 리스트
 export const SELECT_GROUP_COMMUNITY_LIST = `
@@ -328,7 +328,7 @@ export const SELECT_GROUP_COMMUNITY_LIST = `
             }
         }
     }
-`
+`;
 
 // 가입학급 여부 조회
 export const SELECT_JOIN_GROUP = `
@@ -337,7 +337,7 @@ export const SELECT_JOIN_GROUP = `
             ${Common.GROUP}
         }
     }
-`
+`;
 
 // 학급 기본정보 조회
 // 선생님인경우 학급오너권한 및 공지등록 권한 추가
@@ -351,7 +351,7 @@ export const SELECT_GROUP_SIMPLE = `
             warningNotice
         }
     }
-`
+`;
 
 // 학급 스터디  리스트
 export const SELECT_GROUP_STUDY_LIST = `
@@ -433,7 +433,7 @@ export const SELECT_GROUP_STUDY_LIST = `
             }
         }
     }
-`
+`;
 
 // 학급 스터디 공유
 export const SHARE_TO_COPY_LECTURE_GROUP = `
@@ -444,7 +444,7 @@ export const SHARE_TO_COPY_LECTURE_GROUP = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 // 학급 스터디 삭제
 export const REMOVE_SHARE_LECTURE_GROUP = `
@@ -453,7 +453,7 @@ export const REMOVE_SHARE_LECTURE_GROUP = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 // 학급 과제 생성
 export const CREATE_HOMEWORK_FOR_GROUP = `
@@ -464,7 +464,7 @@ export const CREATE_HOMEWORK_FOR_GROUP = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 // 학급 과제 수정
 export const UPDATE_HOMEWORK_FOR_GROUP = `
@@ -475,7 +475,7 @@ export const UPDATE_HOMEWORK_FOR_GROUP = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 // 학급 스터디 수정
 export const UPDATE_STUDY_FOR_GROUP = `
@@ -486,7 +486,7 @@ export const UPDATE_STUDY_FOR_GROUP = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 // 학급 스터디모음 수정
 export const UPDATE_CURRICULUM_FOR_GROUP = `
@@ -497,7 +497,7 @@ export const UPDATE_CURRICULUM_FOR_GROUP = `
             ${Common.RESPONSE}
         }
     }
-`
+`;
 
 // 학급 과제 제출 리스트
 export const SELECT_GROUP_SUBMISSIONS = `
@@ -530,7 +530,7 @@ export const SELECT_GROUP_SUBMISSIONS = `
             }
         }
     }
-`
+`;
 
 // 학급 스터디 진행사항
 export const SELECT_GROUP_PROGRESS = `
@@ -563,4 +563,4 @@ export const SELECT_GROUP_PROGRESS = `
             }
         }
     }
-`
+`;

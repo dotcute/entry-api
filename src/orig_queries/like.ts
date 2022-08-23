@@ -1,4 +1,4 @@
-import * as Common from './dto/common'
+import * as Common from "./dto/common.ts";
 
 export const CHECK_LIKE = `
     query CHECK_LIKE($target: String!){
@@ -6,7 +6,7 @@ export const CHECK_LIKE = `
             isLike
         }
     }
-`
+`;
 
 export const LIKE = `
     mutation LIKE($target: String, $targetSubject: String, $targetType: String, $groupId: ID) {
@@ -14,7 +14,7 @@ export const LIKE = `
             ${Common.LIKE}
         }
     }
-`
+`;
 
 export const UNLIKE = `
     mutation UNLIKE($target: String) {
@@ -22,7 +22,7 @@ export const UNLIKE = `
             ${Common.LIKE}
         }
     }
-`
+`;
 
 export const LIKE_LIST = `
     query LIKE_LIST($target: String){
@@ -33,4 +33,4 @@ export const LIKE_LIST = `
             }
         }
     }
-`
+`;
