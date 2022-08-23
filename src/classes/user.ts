@@ -13,7 +13,7 @@ interface UserConstructor {
 }
 
 export default class User {
-  #__rawData?: any;
+  #__rawData?: UserTypes.UserInfo;
 
   public id: string;
 
