@@ -95,6 +95,7 @@ export default class User {
         )}/${res.data.coverImage.id.slice(2, 4)}/${res.data.coverImage.id}`
       : `https://playentry.org/img/EmptyImage.svg`;
     this.#__role = res.data.role;
+    this.#__rawData = res.data;
   }
 
   public async toJSON(): Promise<UserConstructor> {
