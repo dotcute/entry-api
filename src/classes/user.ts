@@ -76,23 +76,27 @@ export default class User {
   async #getRawData() {
     const res = await gql<UserTypes.UserInfo>(
       await loadQuery("./src/queries/user/getUserInfo.gql"),
-      { id: this.id }
+      { id: this.id },
     );
     if (!res.success) return;
 
     this.#__username = res.data.username;
     this.#__description = res.data.description;
     this.#__profileImage = res.data.profileImage.id
-      ? `https://playentry.org/uploads/${res.data.profileImage.id.slice(
+      ? `https://playentry.org/uploads/${
+        res.data.profileImage.id.slice(
           0,
-          2
-        )}/${res.data.profileImage.id.slice(2, 4)}/${res.data.profileImage.id}`
+          2,
+        )
+      }/${res.data.profileImage.id.slice(2, 4)}/${res.data.profileImage.id}`
       : `https://playentry.org/img/DefaultCardUserThmb.svg`;
     this.#__coverImage = res.data.coverImage.id
-      ? `https://playentry.org/uploads/${res.data.coverImage.id.slice(
+      ? `https://playentry.org/uploads/${
+        res.data.coverImage.id.slice(
           0,
-          2
-        )}/${res.data.coverImage.id.slice(2, 4)}/${res.data.coverImage.id}`
+          2,
+        )
+      }/${res.data.coverImage.id.slice(2, 4)}/${res.data.coverImage.id}`
       : `https://playentry.org/img/EmptyImage.svg`;
     this.#__role = res.data.role;
     this.#__rawData = res.data;
