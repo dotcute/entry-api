@@ -1,7 +1,8 @@
 /// <reference types="../types/common.d.ts" />
 /// <reference types="../types/user.d.ts" />
 
-import { gql, loadQuery } from "../utils.ts";
+import { getLogon } from "../../mod.ts";
+import { cookieJar, gql, loadQuery } from "../utils.ts";
 
 interface UserConstructor {
   id: string;
@@ -13,7 +14,7 @@ interface UserConstructor {
 }
 
 export default class User {
-  #__rawData?: UserTypes.UserInfo;
+  #__rawData?: UserTypes.UserStatus;
 
   public id: string;
 
@@ -74,7 +75,7 @@ export default class User {
   }
 
   async #getRawData() {
-    const res = await gql<UserTypes.UserInfo>(
+    const res = await gql<UserTypes.UserStatus>(
       await loadQuery("user/getUserInfo"),
       { id: this.id },
     );
@@ -82,7 +83,7 @@ export default class User {
 
     this.#__username = res.data.username;
     this.#__description = res.data.description;
-    this.#__profileImage = res.data.profileImage.id
+    this.#__profileImage = res.data.profileImage?.id
       ? `https://playentry.org/uploads/${
         res.data.profileImage.id.slice(
           0,
@@ -90,7 +91,7 @@ export default class User {
         )
       }/${res.data.profileImage.id.slice(2, 4)}/${res.data.profileImage.id}`
       : `https://playentry.org/img/DefaultCardUserThmb.svg`;
-    this.#__coverImage = res.data.coverImage.id
+    this.#__coverImage = res.data.coverImage?.id
       ? `https://playentry.org/uploads/${
         res.data.coverImage.id.slice(
           0,
@@ -118,13 +119,13 @@ export default class User {
   }
 
   public static async getUserIdByUsername(username: string) {
-    const res = await gql<UserTypes.UserInfo>(
+    if (!getLogon()) return;
+    const res = await gql<{ id: string }>(
       await loadQuery("user/getUserIdByUsername"),
       { username },
     );
-    console.log(res);
     if (!res.success) return;
 
-    console.log(res);
+    return res.data.id;
   }
 }

@@ -1,6 +1,9 @@
-import { setLogon, User } from "./mod.ts";
+import { config } from "dotenv";
+import { login, User } from "./mod.ts";
 
-const dukhwa = new User({ id: "60bc5559659bf40bd15d022c" });
+await config({ export: true, allowEmptyValues: true });
+await login(Deno.env.get("USERNAME")!, Deno.env.get("PASSWORD")!, false);
 
-// console.log(await dukhwa.toJSON());
-User.getUserIdByUsername("dukhwa");
+const dukhwa = new User({ id: await User.getUserIdByUsername("dukhwa") ?? "" });
+
+console.log(await dukhwa.toJSON());

@@ -1,7 +1,28 @@
-import { wrapFetch } from "another_cookiejar";
+import { CookieJar } from "tough-cookie";
+import { setHeader } from "header_utils";
 import { dirname, fromFileUrl, join } from "path";
 
-const cookieFetch = wrapFetch();
+export const cookieJar = new CookieJar();
+
+async function cookieFetch(
+  input: string | Request | URL,
+  init?: RequestInit | undefined,
+): Promise<Response> {
+  if (!input) return await fetch(input);
+
+  const cookieStr = await cookieJar.getCookieString(input.toString());
+  const altInit = init || {};
+  if (!altInit.headers) altInit.headers = new Headers();
+
+  setHeader(altInit.headers, "cookie", cookieStr);
+  const res = await fetch(input, altInit);
+  res.headers.forEach(function (value, key) {
+    if (key.toLowerCase() === "set-cookie") {
+      cookieJar.setCookie(value, input.toString());
+    }
+  });
+  return res;
+}
 
 export async function getCSRFToken() {
   const body = await (await cookieFetch("https://playentry.org")).text();
