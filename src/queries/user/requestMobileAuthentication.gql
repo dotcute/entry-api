@@ -1,0 +1,10 @@
+mutation ($number: String!, $nationalNumber: String!, $contryCode: String) {
+  mobileAuthentication(
+    number: $number
+    nationalNumber: $nationalNumber
+    contryCode: $contryCode
+  ) {
+    status
+    result
+  }
+}

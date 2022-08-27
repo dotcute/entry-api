@@ -1,0 +1,6 @@
+mutation ($key: String!, $receiveNumber: String!) {
+  sendReceiveNumber(key: $key, receiveNumber: $receiveNumber) {
+    status
+    result
+  }
+}

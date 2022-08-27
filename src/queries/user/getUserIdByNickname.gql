@@ -1,0 +1,5 @@
+query ($nickname: String) {
+  user(nickname: $nickname) {
+    id
+  }
+}

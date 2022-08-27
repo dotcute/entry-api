@@ -1,0 +1,5 @@
+query ($nickname: String) {
+  existsUser(nickname: $nickname) {
+    exists
+  }
+}

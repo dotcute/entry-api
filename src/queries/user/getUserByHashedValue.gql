@@ -1,0 +1,7 @@
+query ($hashedValue: String) {
+  hashedValueUser(hashedValue: $hashedValue) {
+    id
+    nickname
+    username
+  }
+}

@@ -1,0 +1,5 @@
+query ($mobile: String) {
+  existsUser(mobile: $mobile) {
+    exists
+  }
+}

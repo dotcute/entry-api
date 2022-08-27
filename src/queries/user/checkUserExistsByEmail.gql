@@ -1,0 +1,5 @@
+query ($email: String) {
+  existsUser(email: $email) {
+    exists
+  }
+}
