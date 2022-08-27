@@ -1,8 +1,8 @@
 /// <reference types="../types/common.d.ts" />
 /// <reference types="../types/user.d.ts" />
 
-import { getLogon } from "../../mod.ts";
-import { cookieJar, gql, loadQuery } from "../utils.ts";
+import { APIError, getLogon } from "../../mod.ts";
+import { gql, loadQuery } from "../utils.ts";
 
 interface UserConstructor {
   id: string;
@@ -119,13 +119,25 @@ export default class User {
   }
 
   public static async getUserIdByUsername(username: string) {
-    if (!getLogon()) return;
+    if (!getLogon()) throw new Error(APIError.LOGIN_REQUIRED);
     const res = await gql<{ id: string }>(
       await loadQuery("user/getUserIdByUsername"),
       { username },
     );
-    if (!res.success) return;
+    if (!res.success) throw new Error(APIError.OPERATION_UNSUCCESSFUL);
 
     return res.data.id;
+  }
+
+  public static async fromUsername(username: string) {
+    if (!getLogon()) throw new Error(APIError.LOGIN_REQUIRED);
+
+    try {
+      const id = await User.getUserIdByUsername(username);
+
+      return new User({ id });
+    } catch (err) {
+      throw new Error(err.message);
+    }
   }
 }
