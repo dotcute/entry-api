@@ -40,6 +40,6 @@ declare namespace UserTypes {
     studentTerm: boolean;
     status: { userStatus: "USE" };
     profileImage: CommonTypes.Image | null;
-    banned: any | null;
+    banned: Record<string, any> | null;
   }
 }
