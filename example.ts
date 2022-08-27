@@ -4,7 +4,6 @@ import { login, User } from "./mod.ts";
 await config({ export: true, allowEmptyValues: true });
 await login(Deno.env.get("USERNAME")!, Deno.env.get("PASSWORD")!, false);
 
-// const dukhwa = new User({ id: await User.getUserIdByUsername("dukhwa") ?? "" });
-const dukhwa = await User.fromUsername("dukhwa");
+const dukhwa = await User.fromNickname("띠까");
 
 console.log(await dukhwa.toJSON());

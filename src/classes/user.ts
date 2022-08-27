@@ -129,11 +129,34 @@ export default class User {
     return res.data.id;
   }
 
+  public static async getUserIdByNickname(nickname: string) {
+    if (!getLogon()) throw new Error(APIError.LOGIN_REQUIRED);
+    const res = await gql<{ id: string }>(
+      await loadQuery("user/getUserIdByNickname"),
+      { nickname },
+    );
+    if (!res.success) throw new Error(APIError.OPERATION_UNSUCCESSFUL);
+
+    return res.data.id;
+  }
+
   public static async fromUsername(username: string) {
     if (!getLogon()) throw new Error(APIError.LOGIN_REQUIRED);
 
     try {
       const id = await User.getUserIdByUsername(username);
+
+      return new User({ id });
+    } catch (err) {
+      throw new Error(err.message);
+    }
+  }
+
+  public static async fromNickname(nickname: string) {
+    if (!getLogon()) throw new Error(APIError.LOGIN_REQUIRED);
+
+    try {
+      const id = await User.getUserIdByNickname(nickname);
 
       return new User({ id });
     } catch (err) {
