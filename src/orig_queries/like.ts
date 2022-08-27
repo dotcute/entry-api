@@ -1,4 +1,4 @@
-import * as Common from "./dto/common.ts";
+import * as Common from './dto/common.ts';
 
 export const CHECK_LIKE = `
     query CHECK_LIKE($target: String!){

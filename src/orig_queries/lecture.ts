@@ -1,5 +1,5 @@
-import * as DTO from "./dto/lecture.ts";
-import * as Common from "./dto/common.ts";
+import * as DTO from './dto/lecture.ts';
+import * as Common from './dto/common.ts';
 
 export const CREATE_LECTURE = `
     mutation CREATE_LECTURE(

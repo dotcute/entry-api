@@ -11,7 +11,7 @@ export const SELECT_PROJECTS_INPUT = `
     $searchAfter: JSON
     $searchType: String
     $cacheKey: String
-`
+`;
 export const SELECT_PROJECTS_MIDDLE = `
     query: $query
     categoryCode: $categoryCode
@@ -25,7 +25,7 @@ export const SELECT_PROJECTS_MIDDLE = `
     searchAfter: $searchAfter
     searchType: $searchType
     cacheKey: $cacheKey
-`
+`;
 
 export const SELECT_USER_PROJECTS_INPUT = `
     $user: String!
@@ -37,7 +37,7 @@ export const SELECT_USER_PROJECTS_INPUT = `
     $except: [ID]
     $searchAfter: JSON
     $searchType: String
-`
+`;
 
 export const SELECT_USER_PROJECTS_MIDDLE = `
     user: $user
@@ -49,7 +49,7 @@ export const SELECT_USER_PROJECTS_MIDDLE = `
     except: $except
     searchAfter: $searchAfter
     searchType: $searchType
-`
+`;
 
 export const SELECT_FOLLOWING_PROJECTS_INPUT = `
     $pageParam: PageParam
@@ -57,7 +57,7 @@ export const SELECT_FOLLOWING_PROJECTS_INPUT = `
     $categoryCode: String
     $searchAfter: JSON
     $searchType: String
-`
+`;
 
 export const SELECT_FOLLOWING_PROJECTS_MIDDLE = `
     pageParam: $pageParam
@@ -65,7 +65,7 @@ export const SELECT_FOLLOWING_PROJECTS_MIDDLE = `
     categoryCode: $categoryCode
     searchAfter: $searchAfter
     searchType: $searchType
-`
+`;
 
 export const CREATE_PROJECT_INPUT = `
     $name: String
@@ -93,7 +93,7 @@ export const CREATE_PROJECT_INPUT = `
     $categoryCode: String
     $parent: ID
     $learning: String
-`
+`;
 
 export const CREATE_PROJECT_MIDDLE = `
     name: $name
@@ -121,7 +121,7 @@ export const CREATE_PROJECT_MIDDLE = `
     categoryCode: $categoryCode
     parent: $parent
     learning: $learning
-`
+`;
 
 export const UPDATE_PROJECT_INPUT = `
     $id: ID!
@@ -145,7 +145,7 @@ export const UPDATE_PROJECT_INPUT = `
     $isPracticalCourse: Boolean
     $group: ID
     $learning: String
-`
+`;
 
 export const UPDATE_PROJECT_MIDDLE = `
     id: $id
@@ -169,4 +169,4 @@ export const UPDATE_PROJECT_MIDDLE = `
     isPracticalCourse: $isPracticalCourse
     group: $group
     learning: $learning
-`
+`;

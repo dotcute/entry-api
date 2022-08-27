@@ -1,4 +1,4 @@
-import * as Common from "./dto/common.ts";
+import * as Common from './dto/common.ts';
 
 export const FAVORITES = `
     query FAVORITES($user: String, $target: String, $targetSubject: String, $targetType: String, $pageParam: PageParam){

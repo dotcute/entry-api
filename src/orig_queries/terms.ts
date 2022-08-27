@@ -9,7 +9,7 @@ export const GET_TERMS_LIST = `
             }
         }
     }
-`
+`;
 
 export const GET_TERMS_BY_DATE = `
     query($date: String, $category: String) {
@@ -20,4 +20,4 @@ export const GET_TERMS_BY_DATE = `
             effectived
         }
     }
-`
+`;

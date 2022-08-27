@@ -1,4 +1,4 @@
-import * as Common from "./dto/common.ts";
+import * as Common from './dto/common.ts';
 
 export const CREATE_DOWNLOAD_LOG = `
     mutation CREATE_DOWNLOAD_LOG($id: ID!, $name:String!, $category: String!, $os: String!, $version: String!){

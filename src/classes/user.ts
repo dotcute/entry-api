@@ -1,8 +1,8 @@
 /// <reference types="../types/common.d.ts" />
 /// <reference types="../types/user.d.ts" />
 
-import { APIError, getLogon } from "../../mod.ts";
-import { gql, loadQuery } from "../utils.ts";
+import { APIError, getLogon } from '../../mod.ts';
+import { gql, loadQuery } from '../utils.ts';
 
 interface UserConstructor {
   id: string;
@@ -76,7 +76,7 @@ export default class User {
 
   async #getRawData() {
     const res = await gql<UserTypes.UserStatus>(
-      await loadQuery("user/getUserInfo"),
+      await loadQuery('user/getUserInfo'),
       { id: this.id },
     );
     if (!res.success) return;
@@ -121,7 +121,7 @@ export default class User {
   public static async getUserIdByUsername(username: string) {
     if (!getLogon()) throw new Error(APIError.LOGIN_REQUIRED);
     const res = await gql<{ id: string }>(
-      await loadQuery("user/getUserIdByUsername"),
+      await loadQuery('user/getUserIdByUsername'),
       { username },
     );
     if (!res.success) throw new Error(APIError.OPERATION_UNSUCCESSFUL);
@@ -132,7 +132,7 @@ export default class User {
   public static async getUserIdByNickname(nickname: string) {
     if (!getLogon()) throw new Error(APIError.LOGIN_REQUIRED);
     const res = await gql<{ id: string }>(
-      await loadQuery("user/getUserIdByNickname"),
+      await loadQuery('user/getUserIdByNickname'),
       { nickname },
     );
     if (!res.success) throw new Error(APIError.OPERATION_UNSUCCESSFUL);

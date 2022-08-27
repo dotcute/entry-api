@@ -8,7 +8,7 @@ export const CREATE_LECTURE_INPUT = `
     $studies: [JSON]
     $groupId: ID
     $isOpen: Boolean
-`
+`;
 
 export const CREATE_LECTURE_MIDDLE = `
     title: $title
@@ -20,7 +20,7 @@ export const CREATE_LECTURE_MIDDLE = `
     studies: $studies
     groupId: $groupId
     isOpen: $isOpen
-`
+`;
 
 export const UPDATE_LECTURE_INPUT = `
     $id: ID!
@@ -32,7 +32,7 @@ export const UPDATE_LECTURE_INPUT = `
     $requiredTime: Int
     $studies: [JSON]
     $isOpen: Boolean
-`
+`;
 
 export const UPDATE_LECTURE_MIDDLE = `
     id: $id
@@ -44,4 +44,4 @@ export const UPDATE_LECTURE_MIDDLE = `
     requiredTime: $requiredTime
     studies: $studies
     isOpen: $isOpen
-`
+`;

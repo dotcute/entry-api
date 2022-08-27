@@ -6,7 +6,7 @@ export const SELECT_SYLLABUS_INPUT = `
     $term: String
     $searchType: String
     $searchAfter: JSON
-`
+`;
 
 export const SELECT_SYLLABUS_MIDDLE = `
     query: $query
@@ -16,7 +16,7 @@ export const SELECT_SYLLABUS_MIDDLE = `
     term: $term
     searchType: $searchType
     searchAfter: $searchAfter
-`
+`;
 
 export const SELECT_USER_SYLLABUS_INPUT = `
     $user: String!
@@ -29,7 +29,7 @@ export const SELECT_USER_SYLLABUS_INPUT = `
     $pageParam: PageParam
     $searchType: String
     $searchAfter: JSON
-`
+`;
 
 export const SELECT_USER_SYLLABUS_MIDDLE = `
     user: $user
@@ -42,4 +42,4 @@ export const SELECT_USER_SYLLABUS_MIDDLE = `
     pageParam: $pageParam
     searchType: $searchType
     searchAfter: $searchAfter
-`
+`;

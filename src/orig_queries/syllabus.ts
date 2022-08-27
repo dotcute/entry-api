@@ -1,5 +1,5 @@
-import * as DTO from "./dto/syllabus.ts";
-import * as Common from "./dto/common.ts";
+import * as DTO from './dto/syllabus.ts';
+import * as Common from './dto/common.ts';
 
 export const SELECT_SYLLABUS = `
     query SELECT_SYLLABUS(

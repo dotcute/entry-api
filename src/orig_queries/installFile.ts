@@ -1,4 +1,4 @@
-import { INSTALL_FILE } from "./dto/common.ts";
+import { INSTALL_FILE } from './dto/common.ts';
 
 export const GET_INSTALL_FILES = `
     query($limit: Int, $category: String!, $page: Int) {

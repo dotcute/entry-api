@@ -4,4 +4,4 @@ export const SELECT_MAZE_USER = `
             lastStages
         }
     }
-`
+`;

@@ -1,4 +1,4 @@
-import { PICTURE } from "./dto/common.ts";
+import { PICTURE } from './dto/common.ts';
 export const GET_PICTURES = `
     query($category_main: String, $category_sub: String, $type: String, $userId: String, $pageParam: PageParam) {
         pictures(category_main: $category_main, category_sub: $category_sub, type: $type, userId: $userId, pageParam: $pageParam) {

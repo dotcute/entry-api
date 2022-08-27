@@ -2,37 +2,37 @@ export const UPDATED_RESULT = `
     n
     nModified
     ok
-`
+`;
 
 export const BLOCK = `
     category
     blocks
-`
+`;
 
 export const FILE = `
     name
     path
     size
     id
-`
+`;
 
 export const DIMENSION = `
     width
     height
-`
+`;
 
 export const PDF_FILE = `
     name
     path
     url
-`
+`;
 
 export const LABEL = `
     ko
     en
     ja
     vn
-`
+`;
 
 export const PICTURE = `
     id
@@ -50,7 +50,7 @@ export const PICTURE = `
         width
         height
     }
-`
+`;
 
 export const FOREIGN_SELECT_USER = `
     id
@@ -65,7 +65,7 @@ export const FOREIGN_SELECT_USER = `
     }
     description
     role
-`
+`;
 
 export const CODE = `
     id
@@ -77,7 +77,7 @@ export const CODE = `
     scenes
     interface
     expansionBlocks
-`
+`;
 
 export const PROGRESS = `
     id
@@ -89,7 +89,7 @@ export const PROGRESS = `
         status
         value
     }
-`
+`;
 
 export const INJECT_OPTION = `
     objectEditable
@@ -107,7 +107,7 @@ export const INJECT_OPTION = `
     isCheckAnwser
     freezingVariable
     lockBasicBlocks
-`
+`;
 
 export const CATEGORY = `
     id
@@ -130,7 +130,7 @@ export const CATEGORY = `
         depth
         categoryOrder
     }
-`
+`;
 
 export const SOUND = `
     id
@@ -140,7 +140,7 @@ export const SOUND = `
     }
     filename
     duration
-`
+`;
 
 export const SPRITE = `
     id
@@ -158,14 +158,14 @@ export const SPRITE = `
     sounds {
         ${SOUND}
     }
-`
+`;
 
 export const TABLE = `
     chart
     fields
     name
     data
-`
+`;
 
 export const TABLE_INFO = `
     id
@@ -181,7 +181,7 @@ export const TABLE_INFO = `
     linkText
     isOpen
     projectTable
-`
+`;
 
 export const REALTIME_VARIABLE = `
     variableType
@@ -199,7 +199,7 @@ export const REALTIME_VARIABLE = `
     width
     height
     object
-`
+`;
 export const PROJECT = `
     id
     name
@@ -271,7 +271,7 @@ export const PROJECT = `
     learning
     expansionBlocks
     aiUtilizeBlocks
-`
+`;
 
 export const SYLLABUS_LIST_ITEM = `
     id
@@ -298,7 +298,7 @@ export const SYLLABUS_LIST_ITEM = `
     studyCnt
     difficulty
     requiredTime
-`
+`;
 
 export const PROJECT_LIST_ITEM = `
     id
@@ -331,7 +331,7 @@ export const PROJECT_LIST_ITEM = `
     visit
     likeCnt
     comment
-`
+`;
 
 export const GROUP_PROJECT_LIST_ITEM = `
     id
@@ -367,7 +367,7 @@ export const GROUP_PROJECT_LIST_ITEM = `
         group
         count
     }
-`
+`;
 
 export const STUDY = `
     id
@@ -416,7 +416,7 @@ export const STUDY = `
     media
     textContent
     
-`
+`;
 export const LECTURE = `
     id
     title
@@ -500,7 +500,7 @@ export const LECTURE = `
     created
     updated
     blamed
-`
+`;
 
 export const LECTURE_LIST = `
     id
@@ -519,7 +519,7 @@ export const LECTURE_LIST = `
     repStudy{
         ${STUDY}
     }
-`
+`;
 export const CURRICULUM = `
     id
     title
@@ -538,7 +538,7 @@ export const CURRICULUM = `
     created
     updated
     blamed
-`
+`;
 export const COMMENT = `
     id
     user {
@@ -558,7 +558,7 @@ export const COMMENT = `
     sticker {
         ${PICTURE}
     }
-`
+`;
 export const DISCUSS = `
     id
     title
@@ -585,7 +585,7 @@ export const DISCUSS = `
         ${COMMENT}
     }
     blamed
-`
+`;
 
 export const SYLLABUS = `
     id
@@ -604,12 +604,12 @@ export const SYLLABUS = `
         ${FOREIGN_SELECT_USER}
     }
     type
-`
+`;
 
 export const RESPONSE = `
     status
     result
-`
+`;
 
 export const TOPIC = `
     id
@@ -630,7 +630,7 @@ export const TOPIC = `
         category
         targetId
     }
-`
+`;
 
 export const FOLLOWERS = `
     id
@@ -652,7 +652,7 @@ export const FOLLOWERS = `
             name
         }
     }
-`
+`;
 export const FOLLOWINGS = `
     id
     follow {
@@ -673,12 +673,12 @@ export const FOLLOWINGS = `
             name
         }
     }
-`
+`;
 export const FOLLOW = `
     id
     ${FOLLOWERS}
     ${FOLLOWINGS}
-`
+`;
 
 export const INSTALL_FILE = `
     id
@@ -700,17 +700,17 @@ export const INSTALL_FILE = `
     releaseDate
     created
     updated
-`
+`;
 export const FAVORITE = `
     target
     targetSubject
     targetType
-`
+`;
 export const LIKE = `
     target
     targetSubject
     targetType
-`
+`;
 export const BANNER = `
     id
     name
@@ -726,7 +726,7 @@ export const BANNER = `
     subTitle {
         ${LABEL}
     }
-`
+`;
 
 export const STUDY_BANNER = `
     id
@@ -745,7 +745,7 @@ export const STUDY_BANNER = `
     tabletImage {
         ${PICTURE}
     }
-`
+`;
 
 export const STUDY_CONTENTS = `
     id
@@ -767,7 +767,7 @@ export const STUDY_CONTENTS = `
     tabletImage {
         ${PICTURE}
     }
-`
+`;
 
 export const EntryStory = `
 	id
@@ -785,13 +785,13 @@ export const EntryStory = `
         ${PICTURE}
     }
     isLike
-`
+`;
 
 export const FAQ = `
     id
     title
     content
-`
+`;
 
 export const STICKER = `
     id
@@ -802,7 +802,7 @@ export const STICKER = `
     stickers {
         ${PICTURE}
     }
-`
+`;
 
 export const GROUP = `
     id
@@ -883,7 +883,7 @@ export const GROUP = `
     }
     created
     updated
-`
+`;
 
 export const NEW_STUDENT = `
     id
@@ -903,7 +903,7 @@ export const NEW_STUDENT = `
         username
         nickname
     }
-`
+`;
 
 export const LIKE_USER = `
     id
@@ -913,7 +913,7 @@ export const LIKE_USER = `
     user {
         ${FOREIGN_SELECT_USER}
     }
-`
+`;
 
 export const CHALLENGE = `
     id
@@ -928,7 +928,7 @@ export const CHALLENGE = `
         ko
         en
     }
-`
+`;
 
 export const BANNED_INFO = `
     id
@@ -946,4 +946,4 @@ export const BANNED_INFO = `
         status
     }
     projectId
-`
+`;

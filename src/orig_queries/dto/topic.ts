@@ -5,7 +5,7 @@ export const CREATE_TOPIC_INPUT = `
     $thumbUrl: String
     $category: String
     $link: LinkInput
-`
+`;
 
 export const CREATE_TOPIC_MIDDLE = `
     target: $target
@@ -14,4 +14,4 @@ export const CREATE_TOPIC_MIDDLE = `
     thumbUrl: $thumbUrl
     category: $category
     link: $link
-`
+`;

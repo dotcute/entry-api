@@ -1,4 +1,4 @@
-import * as Common from "./dto/common.ts";
+import * as Common from './dto/common.ts';
 
 export const UPDATE_VIEWCOUNT = `
     mutation UPDATE_VIEWCOUNT(

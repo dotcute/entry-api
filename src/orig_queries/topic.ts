@@ -1,5 +1,5 @@
-import * as Common from "./dto/common.ts";
-import * as DTO from "./dto/topic.ts";
+import * as Common from './dto/common.ts';
+import * as DTO from './dto/topic.ts';
 
 export const TOPIC_SUBSCRIPTION = `
     subscription TOPIC_ADDED($target: String) {

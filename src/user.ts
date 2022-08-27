@@ -1,5 +1,5 @@
-import { getLogon, setLogon } from "../mod.ts";
-import { gql, loadQuery } from "./utils.ts";
+import { getLogon, setLogon } from '../mod.ts';
+import { gql, loadQuery } from './utils.ts';
 
 export async function login(
   username: string,
@@ -10,7 +10,7 @@ export async function login(
   if (getLogon()) return;
 
   const res = await gql<UserTypes.User>(
-    await loadQuery("user/signinByUsername"),
+    await loadQuery('user/signinByUsername'),
     !captcha ? { username, password, rememberme: remember ?? false } : {
       username,
       password,

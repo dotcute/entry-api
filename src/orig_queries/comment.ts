@@ -1,5 +1,5 @@
-import * as DTO from "./dto/comment.ts";
-import * as Common from "./dto/common.ts";
+import * as DTO from './dto/comment.ts';
+import * as Common from './dto/common.ts';
 
 export const SELECT_COMMENTS = `
     query (${DTO.SELECT_COMMENTS_INPUT}){

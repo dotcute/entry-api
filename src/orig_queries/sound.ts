@@ -1,4 +1,4 @@
-import { SOUND } from "./dto/common.ts";
+import { SOUND } from './dto/common.ts';
 
 export const GET_SOUNDS = `
     query($category_main: String, $category_sub: String, $type: String, $userId: String, $pageParam: PageParam) {

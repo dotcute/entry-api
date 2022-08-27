@@ -7,7 +7,7 @@ export const IPADDRESS_BANNED = `
             reason
         }
     }
-`
+`;
 
 export const SELECT_BANNED_INFINITE = `
     query ($id: ID!){
@@ -21,7 +21,7 @@ export const SELECT_BANNED_INFINITE = `
             username
         }
     }
-`
+`;
 
 export const SELECT_BANNED_USER_INFO = `
     query ($id: ID!){
@@ -43,4 +43,4 @@ export const SELECT_BANNED_USER_INFO = `
             projectId
         }
     }
-`
+`;

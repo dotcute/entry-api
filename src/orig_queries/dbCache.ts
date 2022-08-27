@@ -11,4 +11,4 @@ export const SELECT_DB_CACHE = `
             count
         }
     }
-`
+`;

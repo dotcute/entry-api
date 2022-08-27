@@ -1,5 +1,5 @@
-import * as DTO from "./dto/discuss.ts";
-import * as Common from "./dto/common.ts";
+import * as DTO from './dto/discuss.ts';
+import * as Common from './dto/common.ts';
 
 export const SELECT_DISCUSS = `
     query ($id: ID!){

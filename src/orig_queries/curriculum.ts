@@ -1,5 +1,5 @@
-import * as DTO from "./dto/curriculum.ts";
-import * as Common from "./dto/common.ts";
+import * as DTO from './dto/curriculum.ts';
+import * as Common from './dto/common.ts';
 
 export const CREATE_CURRICULUM = `
     mutation CREATE_CURRICULUM(

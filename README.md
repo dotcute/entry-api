@@ -1,6 +1,7 @@
 # entry-api
 
-[`entry-api`](https://github.com/dotcute/entry-api)는 [Deno](https://deno.land)와 [Node.js](https://nodejs.org)에서 사용할 수 있는 비공식 [엔트리](https://playentry.org) API wrapper입니다.
+[`entry-api`](https://github.com/dotcute/entry-api)는 [Deno](https://deno.land)와 [Node.js](https://nodejs.org)에서 사용할 수 있는
+비공식 [엔트리](https://playentry.org) API wrapper입니다.
 
 ## 사용해 보기
 

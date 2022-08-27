@@ -4,7 +4,7 @@ export const CREATE_CURRICULUM_INPUT = `
     $description: String
     $lectures: [String]
     $isOpen: Boolean
-`
+`;
 
 export const CREATE_CURRICULUM_MIDDLE = `
     title: $title
@@ -12,7 +12,7 @@ export const CREATE_CURRICULUM_MIDDLE = `
     description: $description  
     lectures: $lectures
     isOpen: $isOpen
-`
+`;
 
 export const UPDATE_CURRICULUM_INPUT = `
     $id: ID!
@@ -21,7 +21,7 @@ export const UPDATE_CURRICULUM_INPUT = `
     $description: String
     $lectures: [String]
     $isOpen: Boolean
-`
+`;
 
 export const UPDATE_CURRICULUM_MIDDLE = `
     id: $id
@@ -30,4 +30,4 @@ export const UPDATE_CURRICULUM_MIDDLE = `
     description: $description
     lectures: $lectures
     isOpen: $isOpen
-`
+`;

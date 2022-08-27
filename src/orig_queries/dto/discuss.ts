@@ -1,4 +1,4 @@
-import { FOREIGN_SELECT_USER, COMMENT } from './common'
+import { COMMENT, FOREIGN_SELECT_USER } from './common';
 
 export const QnA = `
     id
@@ -14,7 +14,7 @@ export const QnA = `
         content
     }
     thumbnail
-`
+`;
 
 export const Notice = `
     id
@@ -27,7 +27,7 @@ export const Notice = `
     user {
         ${FOREIGN_SELECT_USER}
     }
-`
+`;
 
 export const SUGGESTION = `
     id
@@ -43,7 +43,7 @@ export const SUGGESTION = `
     }
     reply
     progress
-`
+`;
 
 // used group community
 export const Community = `
@@ -80,7 +80,7 @@ export const Community = `
     preDataForClous
     created
     updated
-`
+`;
 
 export const CREATE_DISCUSS_INPUT = `
     $title: String
@@ -88,7 +88,7 @@ export const CREATE_DISCUSS_INPUT = `
     $text: String
     $category: String
     $prefix: String
-`
+`;
 
 export const CREATE_DISCUSS_MIDDLE = `
     title: $title
@@ -96,7 +96,7 @@ export const CREATE_DISCUSS_MIDDLE = `
     text: $text
     category: $category
     prefix: $prefix
-`
+`;
 
 export const CREATE_ENTRYSTORY_INPUT = `
     $content: String
@@ -104,7 +104,7 @@ export const CREATE_ENTRYSTORY_INPUT = `
     $image: String
     $sticker: String
     $cursor: String
-`
+`;
 
 export const CREATE_ENTRYSTORY_MIDDLE = `
     content: $content
@@ -112,7 +112,7 @@ export const CREATE_ENTRYSTORY_MIDDLE = `
     image: $image
     sticker: $sticker
     cursor: $cursor
-`
+`;
 
 export const SELECT_DISCUSS_LIST_INPUT = `
     $pageParam: PageParam
@@ -125,7 +125,7 @@ export const SELECT_DISCUSS_LIST_INPUT = `
     $discussType: String
     $searchType: String
     $searchAfter: JSON
-`
+`;
 
 export const SELECT_DISCUSS_LIST_MIDDLE = `
     pageParam: $pageParam
@@ -138,4 +138,4 @@ export const SELECT_DISCUSS_LIST_MIDDLE = `
     discussType: $discussType
     searchType: $searchType
     searchAfter: $searchAfter
-`
+`;

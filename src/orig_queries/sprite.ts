@@ -1,4 +1,4 @@
-import { SPRITE } from "./dto/common.ts";
+import { SPRITE } from './dto/common.ts';
 
 export const GET_SPRITES = `
     query($category_main: String, $category_sub: String, $type: String, $userId: String, $pageParam: PageParam) {

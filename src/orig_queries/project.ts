@@ -1,5 +1,5 @@
-import * as DTO from "./dto/project.ts";
-import * as Common from "./dto/common.ts";
+import * as DTO from './dto/project.ts';
+import * as Common from './dto/common.ts';
 
 export const SELECT_PROJECT = `
     query($id: ID! $groupId: ID) {

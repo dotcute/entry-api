@@ -1,5 +1,5 @@
-import * as Common from "./dto/common.ts";
-import * as Discuss from "./dto/discuss.ts";
+import * as Common from './dto/common.ts';
+import * as Discuss from './dto/discuss.ts';
 
 const GROUP_HOME = `
     id

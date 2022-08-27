@@ -25,7 +25,7 @@ declare namespace UserTypes {
         project: number;
         study: number;
       };
-      userStatus: "USE";
+      userStatus: 'USE';
     };
   }
 
@@ -38,8 +38,9 @@ declare namespace UserTypes {
     isSnsAuth: boolean;
     isPhoneAuth: boolean;
     studentTerm: boolean;
-    status: { userStatus: "USE" };
+    status: { userStatus: 'USE' };
     profileImage: CommonTypes.Image | null;
+    // deno-lint-ignore no-explicit-any
     banned: Record<string, any> | null;
   }
 }
