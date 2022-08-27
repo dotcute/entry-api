@@ -1,7 +1,7 @@
 import { getLogon } from "../../mod.ts";
 import { gql, loadQuery } from "../utils.ts";
 
-class Entry {
+class EntryService {
   public static async getUserIdByUsername(username: string) {
     console.log(getLogon());
 
@@ -15,4 +15,4 @@ class Entry {
   }
 }
 
-export default Entry;
+export default EntryService;

@@ -1,8 +1,8 @@
-import { Entry, setLogon, User } from "./mod.ts";
+import { EntryService, setLogon, User } from "./mod.ts";
 
 const dukhwa = new User({ id: "60bc5559659bf40bd15d022c" });
 
 
 // console.log(await dukhwa.toJSON());
 
-Entry.getUserIdByUsername("dukhwa");
+EntryService.getUserIdByUsername("dukhwa");
