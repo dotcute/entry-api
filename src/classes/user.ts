@@ -75,7 +75,7 @@ export default class User {
 
   async #getRawData() {
     const res = await gql<UserTypes.UserInfo>(
-      await loadQuery("./src/queries/user/getUserInfo.gql"),
+      await loadQuery("user/getUserInfo"),
       { id: this.id },
     );
     if (!res.success) return;
@@ -119,7 +119,7 @@ export default class User {
 
   public static async getUserIdByUsername(username: string) {
     const res = await gql<UserTypes.UserInfo>(
-      await loadQuery("./src/queries/user/getUserIdByUsername.gql"),
+      await loadQuery("user/getUserIdByUsername"),
       { username },
     );
     console.log(res);

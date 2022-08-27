@@ -1,5 +1,5 @@
 import { wrapFetch } from "another_cookiejar";
-import { dirname, fromFileUrl } from "path";
+import { dirname, fromFileUrl, join } from "path";
 
 const cookieFetch = wrapFetch();
 
@@ -59,5 +59,7 @@ export async function gql<T>(
 }
 
 export async function loadQuery(queryPath: string) {
-  return await Deno.readTextFile(queryPath);
+  return await Deno.readTextFile(
+    join(dirname(fromFileUrl(import.meta.url)), "queries", queryPath + ".gql"),
+  );
 }
