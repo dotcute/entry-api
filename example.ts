@@ -6,4 +6,5 @@ await login(Deno.env.get('USERNAME')!, Deno.env.get('PASSWORD')!, false);
 
 const dukhwa = await User.fromNickname('띠까');
 
-console.log(await dukhwa.coverImage);
+console.log(await dukhwa.username);
+console.log(await dukhwa.nickname);

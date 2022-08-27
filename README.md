@@ -15,7 +15,7 @@ $ cd entry-api
 ### 실행
 
 ```bash
-$ deno run --allow-read --allow-net example.ts
+$ deno run --allow-read --allow-net --allow-env example.ts
 # 또는 watch 모드로 실행
-$ deno run --allow-read --allow-net --watch example.ts
+$ deno run --allow-read --allow-net --allow-env --watch example.ts
 ```
