@@ -1,4 +1,5 @@
-import { wrapFetch } from "./deps.ts";
+import { wrapFetch } from "another_cookiejar";
+import { dirname, fromFileUrl } from "path";
 
 const cookieFetch = wrapFetch();
 

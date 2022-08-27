@@ -116,4 +116,15 @@ export default class User {
       };
     })();
   }
+
+  public static async getUserIdByUsername(username: string) {
+    const res = await gql<UserTypes.UserInfo>(
+      await loadQuery("./src/queries/user/getUserIdByUsername.gql"),
+      { username },
+    );
+    console.log(res);
+    if (!res.success) return;
+
+    console.log(res);
+  }
 }
